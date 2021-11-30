@@ -49,6 +49,7 @@
 		C721781927567F93005E775E /* TestingCodeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TestingCodeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C721781D27567F93005E775E /* TestingCodeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestingCodeUITests.swift; sourceTree = "<group>"; };
 		C721781F27567F93005E775E /* TestingCodeUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestingCodeUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		C7EA29EA2756806C00ACA7E5 /* Networking */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Networking; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +107,7 @@
 				C721780527567F93005E775E /* Assets.xcassets */,
 				C721780727567F93005E775E /* LaunchScreen.storyboard */,
 				C721780A27567F93005E775E /* Info.plist */,
+				C7EA29E92756805700ACA7E5 /* Modules */,
 			);
 			path = TestingCode;
 			sourceTree = "<group>";
@@ -125,6 +127,14 @@
 				C721781F27567F93005E775E /* TestingCodeUITestsLaunchTests.swift */,
 			);
 			path = TestingCodeUITests;
+			sourceTree = "<group>";
+		};
+		C7EA29E92756805700ACA7E5 /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				C7EA29EA2756806C00ACA7E5 /* Networking */,
+			);
+			path = Modules;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
