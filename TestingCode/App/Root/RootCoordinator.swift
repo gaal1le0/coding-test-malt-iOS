@@ -13,23 +13,26 @@ import UIKit
 class RootCoordinator {
     
     //MARK: - Dependencies
-    var client: APIClient?
-    var window: UIWindow
+    var client: APIClient!
+    var window: UIWindow!
     var factory: RootFactory?
     var navigationController: UINavigationController?
     
     //MARK: - Inits
-    init(_ client: APIClient, window: UIWindow, factory: RootFactory) {
+    init(_ client: APIClient, window: UIWindow, factory: RootFactory, navigationController: UINavigationController) {
         self.client = client
         self.window = window
         self.factory = factory
+        self.navigationController = navigationController
     }
     
     //MARK: - Methods
     func start() {
-        
-        
-        
+        // call factory
+        guard let vc = factory?.mainView(self, client: client) else { return }
+        navigationController?.viewControllers = [vc]
+        window.rootViewController = navigationController
+        window.makeKeyAndVisible()
     }
     
 }
