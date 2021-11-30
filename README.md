@@ -1,10 +1,8 @@
-# Prueba de código Android/iOS - Orange Bank
+# Prueba de código Android/iOS 
 Ejercicio a realizar
 El ejercicio consiste en la implementación de una sencilla aplicación móvil que presente por pantalla información de las transacciones de una cuenta bancaria obtenidas de un servicio web en formato JSON.
 La prueba debe ser escrita en Swift para iOS o Kotlin para Android.
-La entrega se debe realizar subiendo el proyecto a un repositorio de ​Github​ dando acceso de
-Es muy importante que el repositorio sea privado​ y no tenga ninguna referencia a Orange o Orange Bank en el nombre, código, clases...
-Datos a obtener
+La entrega se debe realizar subiendo el proyecto a un repositorio de Github dando acceso de
 
 La lista de transacciones está disponible en esta url:
 
