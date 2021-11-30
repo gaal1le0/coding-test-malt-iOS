@@ -9,7 +9,7 @@ import Foundation
 
 //MARK: - Comunication from Presenter -> View
 protocol MainViewOutputProtocol: AnyObject {
-    
+    func update(_ state: MainViewState)
 }
 
 //MARK: - Comunication from View -> Presenter

@@ -6,3 +6,6 @@
 //
 
 import Foundation
+
+/// Extending String to conform to protocol Error
+extension String: Error { }

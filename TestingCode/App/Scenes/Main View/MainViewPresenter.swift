@@ -14,6 +14,13 @@ class MainViewPresenter {
     weak var view: MainViewOutputProtocol?
     weak var router: MainViewRouter?
     
+    //MARK: - Properties
+    var state: MainViewState = .loading {
+        didSet {
+            view?.update(state)
+        }
+    }
+    
     //MARK: - Inits
     init(_ view: MainViewOutputProtocol, router: MainViewRouter, dataProvider: MainViewDataProvider) {
         self.view = view

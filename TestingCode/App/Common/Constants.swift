@@ -7,6 +7,7 @@
 
 import Foundation
 
+/// Static data used during the app
 struct Constants {
     
     struct kStorybords {

@@ -24,6 +24,8 @@
 		C77D457527568F2300AB0E10 /* MainViewContracts+Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = C77D457427568F2300AB0E10 /* MainViewContracts+Utilities.swift */; };
 		C77D457727568F6800AB0E10 /* MainViewDataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = C77D457627568F6800AB0E10 /* MainViewDataProvider.swift */; };
 		C77D457A2756901600AB0E10 /* Networking in Frameworks */ = {isa = PBXBuildFile; productRef = C77D45792756901600AB0E10 /* Networking */; };
+		C77D457C2756933C00AB0E10 /* MainViewState.swift in Sources */ = {isa = PBXBuildFile; fileRef = C77D457B2756933B00AB0E10 /* MainViewState.swift */; };
+		C77D45802756939300AB0E10 /* TransactionDOM.swift in Sources */ = {isa = PBXBuildFile; fileRef = C77D457F2756939300AB0E10 /* TransactionDOM.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -64,6 +66,8 @@
 		C77D457227568EF800AB0E10 /* MainViewPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewPresenter.swift; sourceTree = "<group>"; };
 		C77D457427568F2300AB0E10 /* MainViewContracts+Utilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MainViewContracts+Utilities.swift"; sourceTree = "<group>"; };
 		C77D457627568F6800AB0E10 /* MainViewDataProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewDataProvider.swift; sourceTree = "<group>"; };
+		C77D457B2756933B00AB0E10 /* MainViewState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewState.swift; sourceTree = "<group>"; };
+		C77D457F2756939300AB0E10 /* TransactionDOM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionDOM.swift; sourceTree = "<group>"; };
 		C7EA29EA2756806C00ACA7E5 /* Networking */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Networking; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -148,9 +152,10 @@
 			isa = PBXGroup;
 			children = (
 				C77D456327568D4B00AB0E10 /* Common */,
-				C77D456827568D9C00AB0E10 /* Resources */,
+				C77D457D2756935F00AB0E10 /* Domain */,
 				C77D456927568DA300AB0E10 /* Scenes */,
 				C77D456B27568DD200AB0E10 /* Root */,
+				C77D456827568D9C00AB0E10 /* Resources */,
 			);
 			path = App;
 			sourceTree = "<group>";
@@ -188,6 +193,7 @@
 				C77D457227568EF800AB0E10 /* MainViewPresenter.swift */,
 				C77D457427568F2300AB0E10 /* MainViewContracts+Utilities.swift */,
 				C77D457627568F6800AB0E10 /* MainViewDataProvider.swift */,
+				C77D457B2756933B00AB0E10 /* MainViewState.swift */,
 			);
 			path = "Main View";
 			sourceTree = "<group>";
@@ -206,6 +212,22 @@
 			children = (
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		C77D457D2756935F00AB0E10 /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+				C77D457E2756938700AB0E10 /* Models */,
+			);
+			path = Domain;
+			sourceTree = "<group>";
+		};
+		C77D457E2756938700AB0E10 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				C77D457F2756939300AB0E10 /* TransactionDOM.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 		C7EA29E92756805700ACA7E5 /* Modules */ = {
@@ -357,7 +379,9 @@
 				C72177FD27567F90005E775E /* AppDelegate.swift in Sources */,
 				C77D456D27568DEA00AB0E10 /* RootCoordinator.swift in Sources */,
 				C77D457727568F6800AB0E10 /* MainViewDataProvider.swift in Sources */,
+				C77D457C2756933C00AB0E10 /* MainViewState.swift in Sources */,
 				C72177FF27567F90005E775E /* SceneDelegate.swift in Sources */,
+				C77D45802756939300AB0E10 /* TransactionDOM.swift in Sources */,
 				C77D456F27568DEF00AB0E10 /* RootFactory.swift in Sources */,
 				C77D456527568D5400AB0E10 /* Constants.swift in Sources */,
 			);

@@ -27,5 +27,15 @@ class MainViewController: UIViewController {
 //MARK: Implementing Output Presenter's methods
 extension MainViewController: MainViewOutputProtocol {
     
+    func update(_ state: MainViewState) {
+        switch state {
+        case .loading:
+            fatalError()
+        case .error(let error):
+            fatalError()
+        case .data(let array):
+            fatalError()
+        }
+    }
     
 }
