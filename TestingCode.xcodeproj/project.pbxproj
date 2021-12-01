@@ -11,7 +11,7 @@
 		C72177FF27567F90005E775E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C72177FE27567F90005E775E /* SceneDelegate.swift */; };
 		C721780627567F93005E775E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C721780527567F93005E775E /* Assets.xcassets */; };
 		C721780927567F93005E775E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C721780727567F93005E775E /* LaunchScreen.storyboard */; };
-		C721781427567F93005E775E /* TestingCodeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C721781327567F93005E775E /* TestingCodeTests.swift */; };
+		C721781427567F93005E775E /* FormatDateTester.swift in Sources */ = {isa = PBXBuildFile; fileRef = C721781327567F93005E775E /* FormatDateTester.swift */; };
 		C77D456527568D5400AB0E10 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = C77D456427568D5400AB0E10 /* Constants.swift */; };
 		C77D456727568D9300AB0E10 /* UITableView+Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = C77D456627568D9300AB0E10 /* UITableView+Utilities.swift */; };
 		C77D456D27568DEA00AB0E10 /* RootCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C77D456C27568DEA00AB0E10 /* RootCoordinator.swift */; };
@@ -50,7 +50,7 @@
 		C721780827567F93005E775E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C721780A27567F93005E775E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C721780F27567F93005E775E /* TestingCodeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TestingCodeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		C721781327567F93005E775E /* TestingCodeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestingCodeTests.swift; sourceTree = "<group>"; };
+		C721781327567F93005E775E /* FormatDateTester.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormatDateTester.swift; sourceTree = "<group>"; };
 		C77D456427568D5400AB0E10 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		C77D456627568D9300AB0E10 /* UITableView+Utilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+Utilities.swift"; sourceTree = "<group>"; };
 		C77D456C27568DEA00AB0E10 /* RootCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootCoordinator.swift; sourceTree = "<group>"; };
@@ -125,7 +125,7 @@
 		C721781227567F93005E775E /* TestingCodeTests */ = {
 			isa = PBXGroup;
 			children = (
-				C721781327567F93005E775E /* TestingCodeTests.swift */,
+				C721781327567F93005E775E /* FormatDateTester.swift */,
 			);
 			path = TestingCodeTests;
 			sourceTree = "<group>";
@@ -387,7 +387,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C721781427567F93005E775E /* TestingCodeTests.swift in Sources */,
+				C721781427567F93005E775E /* FormatDateTester.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
