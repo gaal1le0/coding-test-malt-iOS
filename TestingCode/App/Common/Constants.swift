@@ -22,7 +22,7 @@ struct Constants {
     }
     
     struct kAPI {
-        static let kBasicURL = "https://code-challange-e9f47.web.app/"
+        static let kBasicURL = "https://code-challenge-e9f47.web.app/"
         struct kEndpoints {
             static let kTransactions = "transactions.json"
         }

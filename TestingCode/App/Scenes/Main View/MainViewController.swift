@@ -70,6 +70,7 @@ extension MainViewController {
     
     func setupViews() {
         
+        title = "All transactions"
         refreshControl.addTarget(self, action: #selector(setRefresh), for: .valueChanged)
         refreshControl.tintColor = .black
         
