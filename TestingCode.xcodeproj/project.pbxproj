@@ -15,7 +15,7 @@
 		C721781E27567F93005E775E /* TestingCodeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C721781D27567F93005E775E /* TestingCodeUITests.swift */; };
 		C721782027567F93005E775E /* TestingCodeUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C721781F27567F93005E775E /* TestingCodeUITestsLaunchTests.swift */; };
 		C77D456527568D5400AB0E10 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = C77D456427568D5400AB0E10 /* Constants.swift */; };
-		C77D456727568D9300AB0E10 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C77D456627568D9300AB0E10 /* Extensions.swift */; };
+		C77D456727568D9300AB0E10 /* UITableView+Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = C77D456627568D9300AB0E10 /* UITableView+Utilities.swift */; };
 		C77D456D27568DEA00AB0E10 /* RootCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C77D456C27568DEA00AB0E10 /* RootCoordinator.swift */; };
 		C77D456F27568DEF00AB0E10 /* RootFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = C77D456E27568DEF00AB0E10 /* RootFactory.swift */; };
 		C77D457127568ED200AB0E10 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C77D457027568ED200AB0E10 /* MainViewController.swift */; };
@@ -31,6 +31,7 @@
 		C7C5A30D275760C900C32D20 /* MainTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7C5A30B275760C900C32D20 /* MainTableViewCell.swift */; };
 		C7C5A30E275760C900C32D20 /* MainTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C7C5A30C275760C900C32D20 /* MainTableViewCell.xib */; };
 		C7C5A3122757643F00C32D20 /* Date+Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7C5A3112757643F00C32D20 /* Date+Utilities.swift */; };
+		C7C5A315275764EB00C32D20 /* String+Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7C5A314275764EB00C32D20 /* String+Utilities.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,7 +64,7 @@
 		C721781D27567F93005E775E /* TestingCodeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestingCodeUITests.swift; sourceTree = "<group>"; };
 		C721781F27567F93005E775E /* TestingCodeUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestingCodeUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		C77D456427568D5400AB0E10 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
-		C77D456627568D9300AB0E10 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		C77D456627568D9300AB0E10 /* UITableView+Utilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+Utilities.swift"; sourceTree = "<group>"; };
 		C77D456C27568DEA00AB0E10 /* RootCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootCoordinator.swift; sourceTree = "<group>"; };
 		C77D456E27568DEF00AB0E10 /* RootFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootFactory.swift; sourceTree = "<group>"; };
 		C77D457027568ED200AB0E10 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
@@ -78,6 +79,7 @@
 		C7C5A30B275760C900C32D20 /* MainTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTableViewCell.swift; sourceTree = "<group>"; };
 		C7C5A30C275760C900C32D20 /* MainTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainTableViewCell.xib; sourceTree = "<group>"; };
 		C7C5A3112757643F00C32D20 /* Date+Utilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Utilities.swift"; sourceTree = "<group>"; };
+		C7C5A314275764EB00C32D20 /* String+Utilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Utilities.swift"; sourceTree = "<group>"; };
 		C7EA29EA2756806C00ACA7E5 /* Networking */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Networking; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -272,7 +274,8 @@
 			isa = PBXGroup;
 			children = (
 				C7C5A3112757643F00C32D20 /* Date+Utilities.swift */,
-				C77D456627568D9300AB0E10 /* Extensions.swift */,
+				C7C5A314275764EB00C32D20 /* String+Utilities.swift */,
+				C77D456627568D9300AB0E10 /* UITableView+Utilities.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -423,7 +426,8 @@
 				C7C5A3082757609000C32D20 /* TransactionsRequest.swift in Sources */,
 				C77D457527568F2300AB0E10 /* MainViewContracts+Utilities.swift in Sources */,
 				C77D457127568ED200AB0E10 /* MainViewController.swift in Sources */,
-				C77D456727568D9300AB0E10 /* Extensions.swift in Sources */,
+				C77D456727568D9300AB0E10 /* UITableView+Utilities.swift in Sources */,
+				C7C5A315275764EB00C32D20 /* String+Utilities.swift in Sources */,
 				C7C5A3122757643F00C32D20 /* Date+Utilities.swift in Sources */,
 				C7C5A30D275760C900C32D20 /* MainTableViewCell.swift in Sources */,
 				C7C5A30A275760A100C32D20 /* TransactionsDTO.swift in Sources */,
