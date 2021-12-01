@@ -30,6 +30,7 @@
 		C7C5A30A275760A100C32D20 /* TransactionsDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7C5A309275760A100C32D20 /* TransactionsDTO.swift */; };
 		C7C5A30D275760C900C32D20 /* MainTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7C5A30B275760C900C32D20 /* MainTableViewCell.swift */; };
 		C7C5A30E275760C900C32D20 /* MainTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C7C5A30C275760C900C32D20 /* MainTableViewCell.xib */; };
+		C7C5A3122757643F00C32D20 /* Date+Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7C5A3112757643F00C32D20 /* Date+Utilities.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -76,6 +77,7 @@
 		C7C5A309275760A100C32D20 /* TransactionsDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionsDTO.swift; sourceTree = "<group>"; };
 		C7C5A30B275760C900C32D20 /* MainTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTableViewCell.swift; sourceTree = "<group>"; };
 		C7C5A30C275760C900C32D20 /* MainTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainTableViewCell.xib; sourceTree = "<group>"; };
+		C7C5A3112757643F00C32D20 /* Date+Utilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Utilities.swift"; sourceTree = "<group>"; };
 		C7EA29EA2756806C00ACA7E5 /* Networking */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Networking; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -159,6 +161,7 @@
 		C77D456227568D4700AB0E10 /* App */ = {
 			isa = PBXGroup;
 			children = (
+				C7C5A3102757643500C32D20 /* Extensions */,
 				C77D456327568D4B00AB0E10 /* Common */,
 				C77D457D2756935F00AB0E10 /* Domain */,
 				C77D456927568DA300AB0E10 /* Scenes */,
@@ -171,7 +174,6 @@
 		C77D456327568D4B00AB0E10 /* Common */ = {
 			isa = PBXGroup;
 			children = (
-				C77D456627568D9300AB0E10 /* Extensions.swift */,
 				C77D456427568D5400AB0E10 /* Constants.swift */,
 			);
 			path = Common;
@@ -264,6 +266,15 @@
 				C7C5A309275760A100C32D20 /* TransactionsDTO.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		C7C5A3102757643500C32D20 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				C7C5A3112757643F00C32D20 /* Date+Utilities.swift */,
+				C77D456627568D9300AB0E10 /* Extensions.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 		C7EA29E92756805700ACA7E5 /* Modules */ = {
@@ -413,6 +424,7 @@
 				C77D457527568F2300AB0E10 /* MainViewContracts+Utilities.swift in Sources */,
 				C77D457127568ED200AB0E10 /* MainViewController.swift in Sources */,
 				C77D456727568D9300AB0E10 /* Extensions.swift in Sources */,
+				C7C5A3122757643F00C32D20 /* Date+Utilities.swift in Sources */,
 				C7C5A30D275760C900C32D20 /* MainTableViewCell.swift in Sources */,
 				C7C5A30A275760A100C32D20 /* TransactionsDTO.swift in Sources */,
 				C77D457327568EF800AB0E10 /* MainViewPresenter.swift in Sources */,
