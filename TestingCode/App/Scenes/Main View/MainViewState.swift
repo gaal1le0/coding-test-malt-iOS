@@ -9,7 +9,8 @@ import Foundation
 
 /// States to configurate the view
 enum MainViewState {
-    case loading
+    case loadingView
+    case loadingTable
     case error(Error)
     case data([TransactionDOM])
 }

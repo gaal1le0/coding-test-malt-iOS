@@ -16,7 +16,7 @@ extension UITableView {
     /// configurate table view according to an state
     func setBackgound(to state: MainViewState) {
         switch state {
-        case .loading:
+        case .loadingView:
             let spinnerTable = UIActivityIndicatorView(style: .large)
             spinnerTable.tintColor = UIColor.black
             spinnerTable.hidesWhenStopped = true
@@ -32,6 +32,8 @@ extension UITableView {
             messageLabel.sizeToFit()
             self.backgroundView = messageLabel
             self.backgroundView?.backgroundColor = backgroundColor
+        case .loadingTable:
+            fatalError()
         case .data:
             backgroundView = nil
         }

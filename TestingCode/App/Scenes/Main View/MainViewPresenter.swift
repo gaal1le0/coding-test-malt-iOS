@@ -15,7 +15,7 @@ class MainViewPresenter {
     weak var router: MainViewRouter?
     
     //MARK: - Properties
-    var state: MainViewState = .loading {
+    var state: MainViewState = .loadingView {
         didSet {
             view?.update(state)
         }
@@ -51,6 +51,11 @@ class MainViewPresenter {
 extension MainViewPresenter: MainViewInputProtocol {
     
     func viewWillAppear() {
+        getTransactions()
+    }
+    
+    func refreshData() {
+        state = .loadingTable
         getTransactions()
     }
     

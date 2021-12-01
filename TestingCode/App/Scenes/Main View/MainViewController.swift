@@ -22,14 +22,22 @@ class MainViewController: UIViewController {
     
     //MARK: - Outlets
     @IBOutlet private weak var tableView: UITableView!
+    private let refreshControl = UIRefreshControl()
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        setupViews()
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         presenter?.viewWillAppear()
+    }
+    
+    //MARK: - Methods
+    @objc
+    func setRefresh() {
+        presenter?.refreshData()
     }
     
 }
@@ -56,6 +64,10 @@ extension MainViewController {
     
     func setupViews() {
         
+        refreshControl.addTarget(self, action: #selector(setRefresh), for: .valueChanged)
+        refreshControl.tintColor = .black
+        
+        tableView.refreshControl = refreshControl
         tableView.dataSource = self
         tableView.backgroundColor = .clear
         
@@ -70,6 +82,7 @@ extension MainViewController: MainViewOutputProtocol {
         tableView.setBackgound(to: state)
         switch state {
         case .data(let dom):
+            self.refreshControl.endRefreshing()
             self.data = dom
         default:
             print("Table view data is not ready yet")

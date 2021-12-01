@@ -15,6 +15,7 @@ protocol MainViewOutputProtocol: AnyObject {
 //MARK: - Comunication from View -> Presenter
 protocol MainViewInputProtocol {
     func viewWillAppear()
+    func refreshData()
 }
 
 //MARK: - Router to change views
