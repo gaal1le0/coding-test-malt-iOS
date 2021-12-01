@@ -39,8 +39,6 @@ class FormatDateTester: XCTestCase {
     func testValidPreviusDay() throws {
         let daybefore = try? Date("2021-11-23T12:00:00Z", strategy: .iso8601)
         let relative = daybefore!.relative(to: today)
-        let expected = formatter.string(from: daybefore!)
-        let pieces = expected.split(separator: "/")
         XCTAssertEqual(relative, "Tuesday, Nov 23, 2021")
     }
     
