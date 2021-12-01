@@ -30,7 +30,7 @@ extension UITableView {
             self.backgroundView = messageLabel
             self.backgroundView?.backgroundColor = backgroundColor
         case .loadingTable:
-            fatalError()
+            print("---- DEBUG: Table is loading with refresh control")
         case .data:
             backgroundView = nil
         }
