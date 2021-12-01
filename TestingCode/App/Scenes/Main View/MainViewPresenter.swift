@@ -15,7 +15,7 @@ class MainViewPresenter {
     weak var router: MainViewRouter?
     
     //MARK: - Properties
-    var state: MainViewState = .loading {
+    var state: MainViewState = .loadingView {
         didSet {
             view?.update(state)
         }
@@ -30,13 +30,57 @@ class MainViewPresenter {
     
     //MARK: - Methods
     
+    func prepareDOMObject(_ dto: [TransactionDTO]) -> [TransactionDOM] {
+        return dto
+            .filter { $0.date.isDateValid }
+            .map(TransactionDOM.init)
+            .reduce([TransactionDOM](), { acc, item in
+                var acc = acc
+                if acc.contains(where: { $0.id == item.id }) {
+                    print("---- DEBUG: FOUND_DUPLICATED IN ARRAY: \(item.id)")
+                    let idx = acc.firstIndex(where: { $0.id == item.id })!
+                    if item.date?.compare(acc[idx].date!) == .orderedDescending {
+                        print("---- DEBUG: REMOVE_DUPLICATED IN ARRAY: \(item.id)")
+                        acc[idx] = item
+                    }
+                    return acc
+                }else{
+                    print("---- DEBUG: This item is not duplicated: \(item.id)")
+                }
+                return acc+[item]
+            })
+            .sorted(by: { $0.date?.compare($1.date!) == .orderedDescending })
+    }
+    
+    func handleResponseData(_ dto: [TransactionDTO]) {
+        state = .data(prepareDOMObject(dto))
+    }
+    
+    func getTransactions() {
+        dataProvider?.getTransactions(callback: { result in
+            switch result {
+            case .success(let transactionsDTO):
+                self.handleResponseData(transactionsDTO)
+            case .failure(let errorMessage):
+                print("--- ERROR HANDLING DECODING: \(errorMessage.localizedDescription)")
+                self.state = .error("Data cannot be downloaded, please try again later")
+            }
+        })
+    }
+    
 }
 
 //MARK: - Input Protocol's methods
 extension MainViewPresenter: MainViewInputProtocol {
     
     func viewWillAppear() {
-        
+        view?.update(state)
+        getTransactions()
+    }
+    
+    func refreshData() {
+        state = .loadingTable
+        getTransactions()
     }
     
 }

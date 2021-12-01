@@ -8,15 +8,6 @@
 import Foundation
 import Networking
 
-//MARK: - DTO
-struct TransactionDTO: Codable {
-    let id: Int?
-    let date: String?
-    let amount: Double?
-    let fee: Double?
-    let description: String?
-}
-
 /// Data provider use for make the request to server
 class MainViewDataProvider {
     
@@ -30,9 +21,8 @@ class MainViewDataProvider {
     
     //MARK: - Methods
     func getTransactions(callback: @escaping(Result<[TransactionDTO], Error>) -> ()) {
-        
-        
-        
+        let request = TransactionsRequest()
+        client?.send(request, completion: callback)
     }
     
 }
