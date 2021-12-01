@@ -13,6 +13,7 @@ enum TransactionsTypes {
     case expense
 }
 
+/// This object represent the Domain Object Model of transaction used during all the aplication staff 
 struct TransactionDOM {
     
     //MARK: - Properties

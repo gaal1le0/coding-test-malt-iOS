@@ -38,4 +38,6 @@ class RootCoordinator {
 }
 
 //MARK: - Extending to implement routing of MainView
-extension RootCoordinator: MainViewRouter { }
+extension RootCoordinator: MainViewRouter {
+    //TODO: Implement all navigation data staff to navigate or instantiate another views
+}

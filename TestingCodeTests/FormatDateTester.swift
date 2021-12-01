@@ -41,7 +41,7 @@ class FormatDateTester: XCTestCase {
         let relative = daybefore!.relative(to: today)
         let expected = formatter.string(from: daybefore!)
         let pieces = expected.split(separator: "/")
-        XCTAssertEqual(relative, "\(pieces[1]). \(pieces[0]).")
+        XCTAssertEqual(relative, "Tuesday, Nov 23, 2021")
     }
     
     func testValidOneSecondCase() throws {

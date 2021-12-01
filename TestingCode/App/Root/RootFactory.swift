@@ -9,7 +9,7 @@ import Foundation
 import UIKit
 import Networking
 
-/// Root factory to construct all the data staff needed for main view
+/// Abstract factory to construct all the data staff needed for main view
 struct RootFactory {
     
     func mainView(_ router: MainViewRouter, client: APIClient) -> UIViewController {

@@ -9,6 +9,7 @@ import Foundation
 
 extension Date {
     
+    /// Compute the diferrent between two dates and format it 
     func relative(to other: Date) -> String {
         
         let diffComponents = Calendar.current.dateComponents([.day], from: self, to: other)
