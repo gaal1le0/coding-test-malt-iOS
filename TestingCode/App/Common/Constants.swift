@@ -16,6 +16,9 @@ struct Constants {
     
     struct kCells {
         static let kMainCell = "MainCell.identifier.id"
+        struct kCellsXIB {
+            static let kMainCell = "MainTableViewCell"
+        }
     }
     
     struct kAPI {

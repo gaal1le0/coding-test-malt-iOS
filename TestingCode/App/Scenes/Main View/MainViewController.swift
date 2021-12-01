@@ -54,7 +54,10 @@ extension MainViewController: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        return UITableViewCell()
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: Constants.kCells.kMainCell, for: indexPath) as? MainTableViewCell else { return UITableViewCell() }
+        //TODO: IMPLEMENT CELL DATA
+        
+        return cell
     }
     
 }
@@ -68,6 +71,7 @@ extension MainViewController {
         refreshControl.tintColor = .black
         
         tableView.refreshControl = refreshControl
+        tableView.register(UINib(nibName: Constants.kCells.kCellsXIB.kMainCell, bundle: nil), forCellReuseIdentifier: Constants.kCells.kMainCell)
         tableView.dataSource = self
         tableView.backgroundColor = .clear
         
