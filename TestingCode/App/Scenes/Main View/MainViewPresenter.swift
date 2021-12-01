@@ -39,12 +39,12 @@ class MainViewPresenter {
                 if acc.contains(item) {
                     let idx = acc.firstIndex(where: { $0.id == item.id })!
                     if item.date?.compare(acc[idx].date!) == .orderedAscending {
-                        print("--- DEBUG: REMOVE_DUPLICATED: \(item.id)")
+                        print("---- DEBUG: REMOVE_DUPLICATED: \(item.id)")
                         acc[idx] = item
                         return acc
                     }
                 }else{
-                    print("--- DEBUG: This item is not duplicated: \(item.id)")
+                    print("---- DEBUG: This item is not duplicated: \(item.id)")
                 }
                 return acc+[item]
             })
@@ -73,6 +73,7 @@ class MainViewPresenter {
 extension MainViewPresenter: MainViewInputProtocol {
     
     func viewWillAppear() {
+        view?.update(state)
         getTransactions()
     }
     
