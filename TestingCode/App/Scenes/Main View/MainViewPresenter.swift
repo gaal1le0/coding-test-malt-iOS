@@ -29,9 +29,19 @@ class MainViewPresenter {
     }
     
     //MARK: - Methods
+    
+    func handleResponseData(_ dto: [TransactionDTO]) {
+        state = .data(dto.map(TransactionDOM.init))
+    }
+    
     func getTransactions() {
         dataProvider?.getTransactions(callback: { result in
-            
+            switch result {
+            case .success(let transactionsDTO):
+                self.handleResponseData(transactionsDTO)
+            case .failure(let errorMessage):
+                self.state = .error(errorMessage)
+            }
         })
     }
     
