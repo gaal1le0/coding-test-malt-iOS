@@ -17,6 +17,21 @@ struct TransactionDTO: Codable {
     let description: String?
 }
 
+/// Request to get Transactions Data
+struct TransactionsRequest: JSONAPIRequest {
+    
+    typealias APIResponse = [TransactionDTO]
+    var resourcePath = Constants.kAPI.kEndpoints.kTransactions
+    var decoder: JSONDecoder = JSONDecoder()
+    
+    func generateHeaders() -> [String : String] {
+        return [
+            "Accept": "application/json"
+        ]
+    }
+    
+}
+
 /// Data provider use for make the request to server
 class MainViewDataProvider {
     
@@ -30,9 +45,8 @@ class MainViewDataProvider {
     
     //MARK: - Methods
     func getTransactions(callback: @escaping(Result<[TransactionDTO], Error>) -> ()) {
-        
-        
-        
+        let request = TransactionsRequest()
+        client?.send(request, completion: callback)
     }
     
 }

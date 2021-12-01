@@ -29,6 +29,11 @@ class MainViewPresenter {
     }
     
     //MARK: - Methods
+    func getTransactions() {
+        dataProvider?.getTransactions(callback: { result in
+            
+        })
+    }
     
 }
 
@@ -36,7 +41,7 @@ class MainViewPresenter {
 extension MainViewPresenter: MainViewInputProtocol {
     
     func viewWillAppear() {
-        
+        getTransactions()
     }
     
 }
