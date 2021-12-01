@@ -30,21 +30,25 @@ class MainViewPresenter {
     
     //MARK: - Methods
     
+    /*
+     .reduce([TransactionDOM](), { acc, item in
+         var acc = acc
+         if acc.contains(item) {
+             let idx = acc.firstIndex(where: { $0.id == item.id })!
+             if item.date?.compare(acc[idx].date!) == .orderedAscending {
+                 acc[idx] = item
+                 return acc
+             }
+         }
+         return acc+[item]
+     })
+     */
+    
     func prepareDOMObject(_ dto: [TransactionDTO]) -> [TransactionDOM] {
-        return dto.filter { $0.date.isDateValid }
-        .map(TransactionDOM.init)
-        .reduce([TransactionDOM](), { acc, item in
-            var acc = acc
-            if acc.contains(item) {
-                let idx = acc.firstIndex(where: { $0.id == item.id })!
-                if item.date?.compare(acc[idx].date!) == .orderedAscending {
-                    acc[idx] = item
-                    return acc
-                }
-            }
-            return acc+[item]
-        })
-        .sorted(by: { $0.date!.compare($1.date!) == .orderedDescending })
+        return dto
+            .filter { $0.date.isDateValid }
+            .map(TransactionDOM.init)
+            .sorted(by: { $0.date?.compare($1.date!) == .orderedDescending })
     }
     
     func handleResponseData(_ dto: [TransactionDTO]) {

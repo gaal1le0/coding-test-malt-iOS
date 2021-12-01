@@ -15,7 +15,12 @@ extension String {
     
     /// This property give us the date valids
     var isDateValid: Bool {
-        return TransactionDOM.dateFormatter.date(from: self) != nil
+        let dateFormatter = DateFormatter()
+        dateFormatter.locale = Locale(identifier: "en_US_POSIX")
+        dateFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ss.SSSZ"
+        let date = dateFormatter.date(from: self)
+        print("---- DEBUG: DATE_VALIDATION: \(self), ctrl: \(date != nil)")
+        return date != nil
     }
     
 }

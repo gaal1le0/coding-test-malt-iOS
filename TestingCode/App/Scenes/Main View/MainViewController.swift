@@ -59,7 +59,7 @@ extension MainViewController: UITableViewDataSource {
         cell.transactionDate.text = data[indexPath.section].dateAsString
         cell.amount.text = data[indexPath.section].ammountFormatted
         cell.transactionDescription.text = data[indexPath.section].description
-        cell.backgroundColor = data[indexPath.section].type == .expense ? .red.withAlphaComponent(0.5) : .green.withAlphaComponent(0.5)
+        cell.backgroundColor = data[indexPath.section].type == .expense ? .systemRed.withAlphaComponent(0.5) : .systemGreen.withAlphaComponent(0.5)
         return cell
     }
     
