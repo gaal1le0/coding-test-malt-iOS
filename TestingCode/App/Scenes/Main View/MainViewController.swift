@@ -55,10 +55,10 @@ extension MainViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: Constants.kCells.kMainCell, for: indexPath) as? MainTableViewCell else { return UITableViewCell() }
-        cell.transactionID.text = data[indexPath.section].id.description
-        cell.transactionDate.text = data[indexPath.section].dateAsString
-        cell.amount.text = data[indexPath.section].ammountFormatted
-        cell.transactionDescription.text = data[indexPath.section].description
+        cell.transactionID.text = "ID: \(data[indexPath.section].id.description)"
+        cell.transactionDate.text = "Date: \(data[indexPath.section].dateAsString)"
+        cell.amount.text = "Amount: \(data[indexPath.section].ammountFormatted)"
+        cell.transactionDescription.text = "Description: \(data[indexPath.section].description)"
         cell.backgroundColor = data[indexPath.section].type == .expense ? .systemRed.withAlphaComponent(0.5) : .systemGreen.withAlphaComponent(0.5)
         return cell
     }
@@ -77,6 +77,7 @@ extension MainViewController {
         tableView.refreshControl = refreshControl
         tableView.register(UINib(nibName: Constants.kCells.kCellsXIB.kMainCell, bundle: nil), forCellReuseIdentifier: Constants.kCells.kMainCell)
         tableView.dataSource = self
+        tableView.rowHeight = 140
         tableView.backgroundColor = .clear
         
     }
