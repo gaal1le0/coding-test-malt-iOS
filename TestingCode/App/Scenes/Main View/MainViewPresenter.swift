@@ -31,7 +31,10 @@ class MainViewPresenter {
     //MARK: - Methods
     
     func handleResponseData(_ dto: [TransactionDTO]) {
-        let dom = dto.filter { $0.date.isDateValid }.map(TransactionDOM.init)
+        let dom = dto.filter { $0.date.isDateValid }
+            .map(TransactionDOM.init)
+            .sorted(by: { $0.date!.compare($1.date!) == .orderedDescending })
+        //TODO: IMPLEMENTING ELIMINAR DUPICADOS Y COGER EL MAS RECIENTE
         state = .data(dom)
     }
     

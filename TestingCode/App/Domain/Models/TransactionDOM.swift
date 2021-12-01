@@ -16,6 +16,7 @@ enum TransactionsTypes {
 struct TransactionDOM {
     
     //MARK: - Properties
+    let id: Int
     let date: Date?
     let amount: Double
     let description: String?
@@ -28,6 +29,7 @@ struct TransactionDOM {
     
     //MARK: - Inits
     init(_ dto: TransactionDTO) {
+        self.id = dto.id
         self.amount = dto.amount + (dto.fee ?? 0)
         self.type = self.amount > 0 ? .income : .expense
         self.date = TransactionDOM.dateFormatter.date(from: dto.date)

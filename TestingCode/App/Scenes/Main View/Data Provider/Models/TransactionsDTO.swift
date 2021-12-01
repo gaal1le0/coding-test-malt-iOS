@@ -9,7 +9,7 @@ import Foundation
 
 //MARK: - DTO
 struct TransactionDTO: Codable {
-    let id: Int?
+    let id: Int
     let date: String
     let amount: Double
     let fee: Double?
