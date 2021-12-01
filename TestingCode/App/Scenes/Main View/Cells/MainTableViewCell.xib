@@ -15,8 +15,61 @@
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
                 <rect key="frame" x="0.0" y="0.0" width="320" height="153"/>
                 <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Amount " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4AA-cE-Kln">
+                        <rect key="frame" x="216" y="14" width="88" height="21"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="88" id="E6b-Qo-SeL"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Date" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gKF-SY-c3i">
+                        <rect key="frame" x="103" y="96" width="201" height="26"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Transaction ID" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kQc-Mc-pdE">
+                        <rect key="frame" x="16" y="14" width="142" height="21"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Description" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="t77-hH-au5">
+                        <rect key="frame" x="32" y="48" width="272" height="40"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="40" id="xse-4x-cd0"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="4AA-cE-Kln" firstAttribute="trailing" secondItem="t77-hH-au5" secondAttribute="trailing" id="0Ga-FK-uxw"/>
+                    <constraint firstItem="kQc-Mc-pdE" firstAttribute="firstBaseline" secondItem="4AA-cE-Kln" secondAttribute="firstBaseline" id="0qU-14-ZtM"/>
+                    <constraint firstItem="kQc-Mc-pdE" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" id="2l3-QR-ozz"/>
+                    <constraint firstItem="t77-hH-au5" firstAttribute="top" secondItem="kQc-Mc-pdE" secondAttribute="bottom" constant="13" id="89W-Z5-Hyx"/>
+                    <constraint firstItem="4AA-cE-Kln" firstAttribute="trailing" secondItem="H2p-sc-9uM" secondAttribute="trailingMargin" id="CpQ-h9-gyY"/>
+                    <constraint firstItem="kQc-Mc-pdE" firstAttribute="baseline" secondItem="4AA-cE-Kln" secondAttribute="baseline" id="bRZ-Jd-yRd"/>
+                    <constraint firstItem="t77-hH-au5" firstAttribute="trailing" secondItem="gKF-SY-c3i" secondAttribute="trailing" id="rYx-HM-xgh"/>
+                    <constraint firstItem="t77-hH-au5" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="16" id="s8L-2b-B0Y"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="gKF-SY-c3i" secondAttribute="bottom" constant="20" id="tUx-cv-Sgl"/>
+                    <constraint firstItem="kQc-Mc-pdE" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="-41" id="ugR-bc-6hb"/>
+                    <constraint firstItem="gKF-SY-c3i" firstAttribute="top" secondItem="t77-hH-au5" secondAttribute="bottom" constant="8" id="w23-BO-Goc"/>
+                    <constraint firstItem="gKF-SY-c3i" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="87" id="ybj-ZH-2Ic"/>
+                    <constraint firstItem="4AA-cE-Kln" firstAttribute="leading" secondItem="kQc-Mc-pdE" secondAttribute="trailing" constant="58" id="zZr-Or-K8e"/>
+                </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="amount" destination="4AA-cE-Kln" id="Iox-2k-GMi"/>
+                <outlet property="transactionDate" destination="gKF-SY-c3i" id="tZE-Fd-OAb"/>
+                <outlet property="transactionDescription" destination="t77-hH-au5" id="C42-2e-Urj"/>
+                <outlet property="transactionID" destination="kQc-Mc-pdE" id="WqS-eq-LjL"/>
+            </connections>
             <point key="canvasLocation" x="137.68115942028987" y="134.26339285714286"/>
         </tableViewCell>
     </objects>

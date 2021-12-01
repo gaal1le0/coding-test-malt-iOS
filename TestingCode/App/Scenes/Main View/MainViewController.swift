@@ -55,8 +55,11 @@ extension MainViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: Constants.kCells.kMainCell, for: indexPath) as? MainTableViewCell else { return UITableViewCell() }
-        //TODO: IMPLEMENT CELL DATA
-        
+        cell.transactionID.text = data[indexPath.section].id.description
+        cell.transactionDate.text = data[indexPath.section].dateAsString
+        cell.amount.text = data[indexPath.section].ammountFormatted
+        cell.transactionDescription.text = data[indexPath.section].description
+        cell.backgroundColor = data[indexPath.section].type == .expense ? .red.withAlphaComponent(0.5) : .green.withAlphaComponent(0.5)
         return cell
     }
     
