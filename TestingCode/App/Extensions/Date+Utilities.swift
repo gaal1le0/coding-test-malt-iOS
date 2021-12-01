@@ -8,6 +8,7 @@
 import Foundation
 
 extension Date {
+    
     func relative(to other: Date) -> String {
         
         let diffComponents = Calendar.current.dateComponents([.day], from: self, to: other)
@@ -23,4 +24,5 @@ extension Date {
         }
         
     }
+    
 }

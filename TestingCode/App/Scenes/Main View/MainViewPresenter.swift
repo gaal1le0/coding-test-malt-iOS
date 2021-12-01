@@ -31,7 +31,8 @@ class MainViewPresenter {
     //MARK: - Methods
     
     func handleResponseData(_ dto: [TransactionDTO]) {
-        state = .data(dto.map(TransactionDOM.init))
+        let dom = dto.filter { $0.date.isDateValid }.map(TransactionDOM.init)
+        state = .data(dom)
     }
     
     func getTransactions() {

@@ -42,4 +42,9 @@ extension TransactionDOM {
     var dateAsString: String {
         return self.date?.relative(to: Date.now) ?? "--"
     }
+    
+    /// Get ammount formatted
+    var ammountFormatted: String {
+        return "\(self.amount) €"
+    }
 }

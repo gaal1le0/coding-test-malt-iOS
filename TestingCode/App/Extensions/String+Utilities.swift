@@ -7,5 +7,15 @@
 
 import Foundation
 
-/// Extending String to conform to protocol Error
+//MARK: - Extending string to give extra funcionalities
+
 extension String: Error { }
+
+extension String {
+    
+    /// This property give us the date valids
+    var isDateValid: Bool {
+        return TransactionDOM.dateFormatter.date(from: self) != nil
+    }
+    
+}
