@@ -14,7 +14,7 @@ class NetworkTest: XCTestCase {
     let config = URLSessionConfiguration.default
     var urlSession: URLSession!
     var apiLogger: NetworkLogger!
-    var sut: ExampleAPIClient!
+    var sut: CodeTestAPIClient!
     var clientHeaders: () -> [String: String] = {
         return [:]
     }
@@ -34,7 +34,7 @@ class NetworkTest: XCTestCase {
         apiLogger = APILogger()
         config.protocolClasses = [MockURLProtocol.self]
         urlSession = URLSession(configuration: config)
-        sut = ExampleAPIClient(url, urlSession: urlSession, dispatchQueue: dispachQueue, logger: apiLogger, clientHeaders: clientHeaders)
+        sut = CodeTestAPIClient(url, urlSession: urlSession, dispatchQueue: dispachQueue, logger: apiLogger, clientHeaders: clientHeaders)
     }
     
     // stop all initial values

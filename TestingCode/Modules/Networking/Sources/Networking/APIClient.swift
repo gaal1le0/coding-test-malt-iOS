@@ -25,7 +25,10 @@ public protocol APIClient {
 
 extension URLSessionDataTask: Cancelable {}
 
-open class ExampleAPIClient {
+//TODO: A repository pattern can be implemented to achieve cache persitance of response, in this case it not needed
+
+/// APIClient to implement all data staff needed for coding
+open class CodeTestAPIClient {
     
     //MARK: - Dependencies
     
@@ -75,7 +78,7 @@ open class ExampleAPIClient {
 }
 
 //MARK: - Extending ExampleAPIClient to implement's methods
-extension ExampleAPIClient: APIClient {
+extension CodeTestAPIClient: APIClient {
     
     @discardableResult
     public func send<T>(_ request: T, completion: @escaping (Result<T.APIResponse, Error>) -> Void) -> Cancelable where T : APIRequest {

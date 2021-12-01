@@ -36,13 +36,14 @@ class MainViewPresenter {
             .map(TransactionDOM.init)
             .reduce([TransactionDOM](), { acc, item in
                 var acc = acc
-                if acc.contains(item) {
+                if acc.contains(where: { $0.id == item.id }) {
+                    print("---- DEBUG: FOUND_DUPLICATED IN ARRAY: \(item.id)")
                     let idx = acc.firstIndex(where: { $0.id == item.id })!
-                    if item.date?.compare(acc[idx].date!) == .orderedAscending {
-                        print("---- DEBUG: REMOVE_DUPLICATED: \(item.id)")
+                    if item.date?.compare(acc[idx].date!) == .orderedDescending {
+                        print("---- DEBUG: REMOVE_DUPLICATED IN ARRAY: \(item.id)")
                         acc[idx] = item
-                        return acc
                     }
+                    return acc
                 }else{
                     print("---- DEBUG: This item is not duplicated: \(item.id)")
                 }

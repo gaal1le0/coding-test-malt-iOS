@@ -19,7 +19,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         guard let windowScene = (scene as? UIWindowScene) else { fatalError("Window scene is not configured") }
         let factory = RootFactory()
         guard let url = URL(string: Constants.kAPI.kBasicURL) else { fatalError("API URL is not configured") }
-        client = ExampleAPIClient(url)
+        client = CodeTestAPIClient(url)
         window = UIWindow(windowScene: windowScene)
         let navigationController = UINavigationController()
         rootCoordinator = RootCoordinator(client, window: window!, factory: factory, navigationController: navigationController)
