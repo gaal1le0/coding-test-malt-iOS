@@ -70,9 +70,9 @@ extension MainViewController {
     
     func setupViews() {
         
-        title = "All transactions"
+        title = "Transactions List"
         refreshControl.addTarget(self, action: #selector(setRefresh), for: .valueChanged)
-        refreshControl.tintColor = .black
+        refreshControl.tintColor = .white
         
         tableView.refreshControl = refreshControl
         tableView.register(UINib(nibName: Constants.kCells.kCellsXIB.kMainCell, bundle: nil), forCellReuseIdentifier: Constants.kCells.kMainCell)
