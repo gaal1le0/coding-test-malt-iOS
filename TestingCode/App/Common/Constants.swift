@@ -10,8 +10,8 @@ import Foundation
 /// Static data used during the app
 struct Constants {
     
-    struct kStorybords {
-        static let kMain = "Main"
+    struct kXIBFiles {
+        static let kMainView = "MainView"
     }
     
     struct kAPI {
