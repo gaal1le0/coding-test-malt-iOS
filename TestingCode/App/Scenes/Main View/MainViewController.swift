@@ -13,6 +13,16 @@ class MainViewController: UIViewController {
     //MARK: - Dependencies
     var presenter: MainViewPresenter?
     
+    //MARK: - Properties
+    var data = [TransactionDOM]() {
+        didSet {
+            tableView.reloadData()
+        }
+    }
+    
+    //MARK: - Outlets
+    @IBOutlet private weak var tableView: UITableView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
     }
@@ -24,17 +34,45 @@ class MainViewController: UIViewController {
     
 }
 
+//MARK: - Table View Data Source
+extension MainViewController: UITableViewDataSource {
+    
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return data.count
+    }
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 1
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        return UITableViewCell()
+    }
+    
+}
+
+//MARK: - Implementing setup methods
+extension MainViewController {
+    
+    func setupViews() {
+        
+        tableView.dataSource = self
+        tableView.backgroundColor = .clear
+        
+    }
+    
+}
+
 //MARK: Implementing Output Presenter's methods
 extension MainViewController: MainViewOutputProtocol {
     
     func update(_ state: MainViewState) {
+        tableView.setBackgound(to: state)
         switch state {
-        case .loading:
-            fatalError()
-        case .error(let error):
-            fatalError()
-        case .data(let array):
-            fatalError()
+        case .data(let dom):
+            self.data = dom
+        default:
+            print("Table view data is not ready yet")
         }
     }
     

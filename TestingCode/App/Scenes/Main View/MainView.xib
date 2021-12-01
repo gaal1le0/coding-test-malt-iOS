@@ -10,6 +10,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MainViewController" customModule="TestingCode" customModuleProvider="target">
             <connections>
+                <outlet property="tableView" destination="HZx-TG-OTK" id="Iny-jM-AxE"/>
                 <outlet property="view" destination="iN0-l3-epB" id="UGT-1F-rRK"/>
             </connections>
         </placeholder>
@@ -17,14 +18,29 @@
         <view contentMode="scaleToFill" id="iN0-l3-epB">
             <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="HZx-TG-OTK">
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                </tableView>
+            </subviews>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
-            <color key="backgroundColor" systemColor="linkColor"/>
-            <point key="canvasLocation" x="139" y="98"/>
+            <color key="backgroundColor" systemColor="systemYellowColor"/>
+            <constraints>
+                <constraint firstItem="HZx-TG-OTK" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="Nja-fo-RKF"/>
+                <constraint firstItem="HZx-TG-OTK" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="m4W-aN-1a0"/>
+                <constraint firstItem="HZx-TG-OTK" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="tmC-aF-6N6"/>
+                <constraint firstItem="HZx-TG-OTK" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="yzR-yF-Kka"/>
+            </constraints>
+            <point key="canvasLocation" x="137.68115942028987" y="97.767857142857139"/>
         </view>
     </objects>
     <resources>
-        <systemColor name="linkColor">
-            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemYellowColor">
+            <color red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
