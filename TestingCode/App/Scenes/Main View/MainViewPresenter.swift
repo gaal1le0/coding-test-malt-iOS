@@ -57,7 +57,8 @@ class MainViewPresenter {
             case .success(let transactionsDTO):
                 self.handleResponseData(transactionsDTO)
             case .failure(let errorMessage):
-                self.state = .error(errorMessage)
+                print("--- ERROR HANDLING DECODING: \(errorMessage.localizedDescription)")
+                self.state = .error("Data cannot be downloaded, please try again later")
             }
         })
     }

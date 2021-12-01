@@ -19,7 +19,7 @@ struct TransactionDOM {
     let id: Int
     let date: Date?
     let amount: Double
-    let description: String?
+    let description: String
     let type: TransactionsTypes
     
     //MARK: - Aux
@@ -29,11 +29,11 @@ struct TransactionDOM {
     
     //MARK: - Inits
     init(_ dto: TransactionDTO) {
-        self.id = dto.id
-        self.amount = dto.amount + (dto.fee ?? 0)
+        self.id = dto.id ?? 0
+        self.amount = (dto.amount ?? 0) + (dto.fee ?? 0)
         self.type = self.amount > 0 ? .income : .expense
-        self.date = TransactionDOM.dateFormatter.date(from: dto.date)
-        self.description = dto.description
+        self.date =  TransactionDOM.dateFormatter.date(from: dto.date)
+        self.description = dto.description ?? "No description provided"
     }
     
 }
