@@ -26,6 +26,10 @@
 		C77D457C2756933C00AB0E10 /* MainViewState.swift in Sources */ = {isa = PBXBuildFile; fileRef = C77D457B2756933B00AB0E10 /* MainViewState.swift */; };
 		C77D45802756939300AB0E10 /* TransactionDOM.swift in Sources */ = {isa = PBXBuildFile; fileRef = C77D457F2756939300AB0E10 /* TransactionDOM.swift */; };
 		C7C5A3032757584400C32D20 /* MainView.xib in Resources */ = {isa = PBXBuildFile; fileRef = C7C5A3022757584400C32D20 /* MainView.xib */; };
+		C7C5A3082757609000C32D20 /* TransactionsRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7C5A3072757609000C32D20 /* TransactionsRequest.swift */; };
+		C7C5A30A275760A100C32D20 /* TransactionsDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7C5A309275760A100C32D20 /* TransactionsDTO.swift */; };
+		C7C5A30D275760C900C32D20 /* MainTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7C5A30B275760C900C32D20 /* MainTableViewCell.swift */; };
+		C7C5A30E275760C900C32D20 /* MainTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C7C5A30C275760C900C32D20 /* MainTableViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -68,6 +72,10 @@
 		C77D457B2756933B00AB0E10 /* MainViewState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewState.swift; sourceTree = "<group>"; };
 		C77D457F2756939300AB0E10 /* TransactionDOM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionDOM.swift; sourceTree = "<group>"; };
 		C7C5A3022757584400C32D20 /* MainView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainView.xib; sourceTree = "<group>"; };
+		C7C5A3072757609000C32D20 /* TransactionsRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionsRequest.swift; sourceTree = "<group>"; };
+		C7C5A309275760A100C32D20 /* TransactionsDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionsDTO.swift; sourceTree = "<group>"; };
+		C7C5A30B275760C900C32D20 /* MainTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTableViewCell.swift; sourceTree = "<group>"; };
+		C7C5A30C275760C900C32D20 /* MainTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainTableViewCell.xib; sourceTree = "<group>"; };
 		C7EA29EA2756806C00ACA7E5 /* Networking */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Networking; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -188,10 +196,11 @@
 		C77D456A27568DA700AB0E10 /* Main View */ = {
 			isa = PBXGroup;
 			children = (
+				C7C5A3052757607200C32D20 /* Data Provider */,
+				C7C5A3042757606D00C32D20 /* Cells */,
 				C77D457027568ED200AB0E10 /* MainViewController.swift */,
 				C77D457227568EF800AB0E10 /* MainViewPresenter.swift */,
 				C77D457427568F2300AB0E10 /* MainViewContracts+Utilities.swift */,
-				C77D457627568F6800AB0E10 /* MainViewDataProvider.swift */,
 				C77D457B2756933B00AB0E10 /* MainViewState.swift */,
 				C7C5A3022757584400C32D20 /* MainView.xib */,
 			);
@@ -226,6 +235,33 @@
 			isa = PBXGroup;
 			children = (
 				C77D457F2756939300AB0E10 /* TransactionDOM.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		C7C5A3042757606D00C32D20 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				C7C5A30B275760C900C32D20 /* MainTableViewCell.swift */,
+				C7C5A30C275760C900C32D20 /* MainTableViewCell.xib */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		C7C5A3052757607200C32D20 /* Data Provider */ = {
+			isa = PBXGroup;
+			children = (
+				C7C5A3062757607C00C32D20 /* Models */,
+				C77D457627568F6800AB0E10 /* MainViewDataProvider.swift */,
+			);
+			path = "Data Provider";
+			sourceTree = "<group>";
+		};
+		C7C5A3062757607C00C32D20 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				C7C5A3072757609000C32D20 /* TransactionsRequest.swift */,
+				C7C5A309275760A100C32D20 /* TransactionsDTO.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -347,6 +383,7 @@
 			files = (
 				C721780927567F93005E775E /* LaunchScreen.storyboard in Resources */,
 				C7C5A3032757584400C32D20 /* MainView.xib in Resources */,
+				C7C5A30E275760C900C32D20 /* MainTableViewCell.xib in Resources */,
 				C721780627567F93005E775E /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -372,9 +409,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C7C5A3082757609000C32D20 /* TransactionsRequest.swift in Sources */,
 				C77D457527568F2300AB0E10 /* MainViewContracts+Utilities.swift in Sources */,
 				C77D457127568ED200AB0E10 /* MainViewController.swift in Sources */,
 				C77D456727568D9300AB0E10 /* Extensions.swift in Sources */,
+				C7C5A30D275760C900C32D20 /* MainTableViewCell.swift in Sources */,
+				C7C5A30A275760A100C32D20 /* TransactionsDTO.swift in Sources */,
 				C77D457327568EF800AB0E10 /* MainViewPresenter.swift in Sources */,
 				C72177FD27567F90005E775E /* AppDelegate.swift in Sources */,
 				C77D456D27568DEA00AB0E10 /* RootCoordinator.swift in Sources */,
