@@ -38,6 +38,13 @@ struct TransactionDOM {
     
 }
 
+//MARK: - Implement Hashable
+extension TransactionDOM: Equatable {
+    static func == (lhs: TransactionDOM, rhs: TransactionDOM) -> Bool {
+        return lhs.id == rhs.id
+    }
+}
+
 //MARK: - Extending DOM to implement more functionalities
 extension TransactionDOM {
     /// Implemented conversion to string for formatter
